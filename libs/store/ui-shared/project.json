@@ -7,7 +7,9 @@
   "targets": {
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
         "jestConfig": "libs/store/ui-shared/jest.config.ts",
         "passWithNoTests": true
@@ -38,7 +40,9 @@
     },
     "build-storybook": {
       "executor": "@storybook/angular:build-storybook",
-      "outputs": ["{options.outputDir}"],
+      "outputs": [
+        "{options.outputDir}"
+      ],
       "options": {
         "outputDir": "dist/storybook/store-ui-shared",
         "configDir": "libs/store/ui-shared/.storybook",
@@ -55,5 +59,8 @@
       }
     }
   },
-  "tags": []
+  "tags": [
+    "scope:store",
+    "type:ui"
+  ]
 }
